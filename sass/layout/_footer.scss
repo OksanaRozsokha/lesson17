@@ -1,0 +1,47 @@
+.main-footer {
+  text-align: center;
+  border-top: 1px solid $grey;
+  .menu-list {
+    @include justify-content(center);
+  }
+}
+.main-content {
+  padding: 5rem 0;
+}
+.phone-number {
+  @include lato(2.3rem, 400);
+  color: $main-dark;
+  .fa-phone {
+    font-size: 20px;
+  }
+}
+.social-networks-list {
+  margin-top: 2.5rem;
+  li {
+    display: inline-block;
+    margin-right: 1.5rem;
+    &:last-child {
+      margin-right: 0;
+    }
+    &:hover .fa {
+      color: $main-color;
+    }
+    .fa {
+      font-size: 1.8rem;
+      color: $main-blue;
+    }
+  }
+}
+.copyright-foot {
+  padding: 1.5rem 0;
+  background: $main-blue;
+}
+a {
+  @include transition-duration(.3s);
+  &.copyright-link {
+    color: $white;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

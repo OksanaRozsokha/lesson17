@@ -1,0 +1,30 @@
+.intro {
+  padding-top: 11rem;
+  background: $main-blue;
+}
+.slider-block {
+  position: relative;
+  top: 9.5rem;
+  max-width: 65rem;
+  margin: -3rem auto 0;
+}
+.dots-list {
+  margin: 2rem auto 0;
+  text-align: center;
+  li {
+    width: 1.5rem;
+    height: 1.5rem;
+    display: inline-block;
+    text-indent: -9999px;
+
+    &:nth-child(2) {
+      margin: 0 0.5rem;
+    }
+  }
+}
+.dots-bdr {
+  border: 2px solid $dots-color;
+  &-active {
+    border: 2px solid $dot-active;
+  }
+}

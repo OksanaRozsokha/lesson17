@@ -1,0 +1,61 @@
+.our-clients {
+  padding: 13.5rem 0;
+  background: $main-color;
+}
+.clients-list {
+  margin-top: 5.5rem;
+  li {
+    margin-bottom: 2rem;
+  }
+}
+.client-card {
+  padding: 4rem 4rem 5rem 3rem;
+  background: $white;
+  @include display-flex;
+  @include  respond-to(handhelds) {
+    @include flex-direction(column);
+  }
+  .img-wrap {
+    width: 100%;
+    margin-right: 3rem;
+    @include  respond-to(handhelds) {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+  }
+  p {
+    margin-bottom: 2.5rem;
+    display: block;
+    position: relative;
+    &:before {
+      @include pseudo("", block);
+      position: absolute;
+      top: -3%;
+      left: -6%;
+      width: 1.5rem;
+      height: 1rem;
+      @include small-bg("../img/quotes-upper.png");
+    }
+    &:after {
+      @include pseudo("", block);
+      position: absolute;
+      bottom: 1%;
+      right: 25%;
+      width: 1.5rem;
+      height: 1rem;
+      @include small-bg("../img/quotes-lower.png");
+      @media (max-width: 380px) {
+        right: 0;
+      }
+    }
+  }
+}
+
+.author {
+  @include lato(1.4rem, 400);
+  color: $orange-text;
+  text-transform: uppercase;
+}
+.profession {
+  color: $blue-text;
+}

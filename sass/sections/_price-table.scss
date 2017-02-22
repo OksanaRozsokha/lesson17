@@ -1,0 +1,80 @@
+.price-table {
+  padding: 13.5rem 0 16rem;
+  background: $sky-blue;
+}
+.price-list {
+  @include display-flex;
+  @include justify-content(center);
+  @include align-items(center);
+  @media (max-width: 767px) {
+    @include flex-direction(column);
+  }
+  li {
+    @media (max-width: 767px) {
+      margin-bottom: 3rem;
+    }
+  }
+}
+.price-card {
+  width: 35%;
+  padding: 5rem 3rem 5.5rem;
+  background: $white;
+  text-align: center;
+  @media (max-width: 767px) {
+    width: 80%;
+  }
+  h3 {
+    @include lato(2.5rem, 300);
+    color: $grey-blue;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+  }
+  .price-item {
+    display: block;
+    @include lato(6rem, 700);
+    color: $buttons-bg;
+    line-height: 1;
+    sup {
+      font-size: 4rem;
+    }
+  }
+  .period {
+    @include lato(1.4rem, 300);
+    color: $grey-blue;
+    text-transform: uppercase;
+  }
+
+  &-blue {
+    background: $main-blue;
+    @include border-radius(2px);
+    h3 {
+     color: $white;
+    }
+    .price-item {
+      color: $white;
+    }
+    .period {
+      color: $white;
+    }
+  }
+  &-bigger {
+    padding: 8.5rem 3rem 8rem;
+  }
+}
+.info-list {
+  width: 100%;
+  li {
+    width: 100%;
+    padding: 1.5rem 0;
+    @include lato(1.4rem, 300);
+    color: $bright-blue;
+    text-transform: uppercase;
+    border-top: 1px solid $light-blue;
+  }
+  &-blue {
+    li {
+      color: $white-blue;
+      border-color: $blue-white;
+    }
+  }
+}

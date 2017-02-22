@@ -1,0 +1,53 @@
+.subscription {
+  padding: 15.5rem 0 27rem;
+  background: url("../img/address-bg.png") 50% 85% no-repeat;
+  .main-form {
+    margin: 3.5rem 0 9.5rem;
+  }
+  .name-icon {
+    input {
+      width: 30.5rem;
+      @media (max-width: 1120px) {
+        width: 28rem;
+      }
+    }
+  }
+  .mail-icon {
+    input {
+      width: 38.5rem;
+      @media (max-width: 1120px) {
+         width: 28rem;
+      }
+    }
+  }
+}
+
+.address-block {
+  max-width: 28.5rem;
+  margin: 0 auto;
+  padding: 7rem 7.5rem 9.5rem 7.5rem;
+  @include small-bg("../img/circle.png");
+  text-align: center;
+  h3 {
+    margin-bottom: 2rem;
+    @include lato(1.5rem, 700);
+    color: $white;
+    text-transform: uppercase;
+  }
+  p {
+    max-width: 145px;
+  }
+  &:after {
+    position: absolute;
+    left: 50%;
+    bottom: -8%;
+    @include transform(translateX(-50%));
+    @include pseudo("", block);
+    width: 5rem;
+    height: 5rem;
+    @include small-bg("../img/logo.png");
+  }
+}
+.email-address {
+  color: $buttons-bg;
+}

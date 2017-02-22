@@ -1,0 +1,64 @@
+.main-form {
+  @include display-flex;
+  @include justify-content(center);
+  @media (max-width: 1120px) {
+    @include align-items(center);
+  }
+  @media (max-width: 565px) {
+    @include flex-direction(column);
+  }
+}
+.inputs-list {
+  margin-right: 1rem;
+  @include display-flex;
+  @media (max-width: 1120px) {
+    display: block;
+
+  }
+  @media (max-width: 565px) {
+    margin: 0 auto;
+  }
+ li {
+    position: relative;
+    margin-right: 1rem;
+   @media (max-width: 1120px) {
+     margin: 0 1rem 1rem 0;
+   }
+
+   &:last-child {
+     margin-right: 0;
+   }
+   &:before {
+     @include pseudo('', block);
+     position: absolute;
+     top: 34%;
+     left: 5%;
+     width: 1.5rem;
+     height: 1.5rem;
+   }
+ }
+}
+input {
+  height: 4.8rem;
+  width: 28rem;
+  border: none;
+  padding: 2rem 2rem 2rem 4rem;
+  @include open-sans(1.3rem);
+  @include border-radius(2px);
+  outline: none;
+  &.border-inp {
+    border: 1px solid $light-grey;
+  }
+}
+@include placeholder {
+  @include open-sans(1.3rem);
+}
+.name-icon:before {
+  @include small-bg('../img/name-icon.png');
+}
+.mail-icon:before {
+  @include small-bg('../img/email-icon.png');
+}
+.tel-icon:before {
+  @include small-bg('../img/phone-icon.png');
+}

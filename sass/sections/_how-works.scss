@@ -1,0 +1,70 @@
+.how-it-works {
+  padding: 15.5rem 0 15rem;
+  text-align: center;
+}
+.works-list {
+  margin: 10rem 0 5rem;
+  li {
+    position: relative;
+    margin-bottom: 4rem;
+  }
+  p {
+    max-width: 21.5rem;
+    margin: 0 auto;
+    //@media (max-width: 575px) {
+    //  max-width: 100%;
+    //}
+  }
+  h3 {
+    margin: 9rem 0 2.5rem;
+  }
+}
+.step-ic {
+  display: inline-block;
+  width: 8.5rem;
+  height: 7rem;
+  text-indent: -9999px;
+
+  &-first {
+    @include small-bg('../img/first-step-icon.png');
+  }
+
+  &-second {
+    @include small-bg('../img/second-step-icon.png');
+  }
+
+  &-third {
+    @include small-bg('../img/third-step-icon.png');
+  }
+
+  &-fourth {
+    @include small-bg('../img/fourth-step-icon.png');
+  }
+}
+.first-step:before {
+  @include pseudo('', block);
+  position: absolute;
+  top: -10%;
+  right: -23%;
+  width: 13rem;
+  height: 3.5rem;
+  @include small-bg('../img/upper-arrows.png');
+  @media (max-width: 991px) {
+    display: none;
+  }
+}
+.second-step:before {
+  @include pseudo('', block);
+  position: absolute;
+  top: 24%;
+  right: -21%;
+  width: 13rem;
+  height: 3.5rem;
+  @include small-bg('../img/lower-arrows.png');
+  @media (max-width: 991px) {
+    display: none;
+  }
+}
+.third-step:before {
+  @extend .first-step:before;
+}

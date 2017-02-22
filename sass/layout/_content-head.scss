@@ -1,0 +1,32 @@
+.head {
+  text-align: center;
+  color: $main-dark;
+  h2 {
+    @include gotham(3rem);
+    font-weight: 900;
+    text-transform: uppercase;
+    @media (max-width: 767px) {
+      line-height: 3.8rem;
+      margin-bottom: 1rem;
+    }
+  }
+  p {
+    @include open-sans(1.6rem);
+  }
+
+  &-big {
+    h1 {
+      @include gotham(3.5rem);
+      font-weight: 900;
+      text-transform: uppercase;
+      @media (max-width: 767px) {
+        line-height: 3.8rem;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  &-white {
+    color: $white;
+  }
+}

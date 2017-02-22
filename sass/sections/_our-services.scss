@@ -1,0 +1,42 @@
+.our-services {
+  padding: 20rem 0 8rem;
+}
+.services-list {
+  margin-top: 9rem;
+  li {
+    position: relative;
+    padding-left: 8.5rem;
+    margin-bottom: 8rem;
+
+    &:before {
+      @include pseudo('', block);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 6.5rem;
+      height: 5.5rem;
+    }
+  }
+  p {
+    max-width: 43rem;
+
+  }
+}
+.font-icon:before {
+  @include small-bg('../img/font-awesome-icon.png');
+}
+.design-icon:before {
+  @include small-bg('../img/responsive-design-icon.png');
+}
+.form-icon:before {
+  @include small-bg('../img/working-form-icon.png');
+}
+.retina-icon:before {
+  @include small-bg('../img/retina-icon.png');
+}
+.code-icon:before {
+  @include small-bg('../img/code-icon.png');
+}
+.landing-icon:before {
+  @include small-bg('../img/dollar-icon.png');
+}
