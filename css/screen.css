@@ -770,7 +770,7 @@ input.border-inp {
   height: 1rem;
   background: url("../img/quotes-lower.png") 50% 50% no-repeat;
 }
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 768px) and (max-width: 1199px) {
   .client-card p:after {
     right: 13%;
   }

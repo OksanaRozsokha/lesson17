@@ -43,7 +43,7 @@
       width: 1.5rem;
       height: 1rem;
       @include small-bg("../img/quotes-lower.png");
-      @media (min-width: 992px)and(max-width: 1199px) {
+      @media (min-width: 768px)and(max-width: 1199px) {
         right: 13%;
       }
       @media (min-width: 534px)and(max-width: 548px) {
