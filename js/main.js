@@ -57,11 +57,6 @@ $(document).ready(function() {
           emailObject: emailSec
         };
 
-            // let data = {
-        //     nameObj: name,
-        //     emailObj: email,
-        //
-        // };
         if (nameSec.length < 3) {
             $('.name-sec').removeClass('border-inp').removeClass('success').addClass('error');
         } else {
@@ -86,4 +81,18 @@ $(document).ready(function() {
         }
 
     });
+
+    //  menu on click
+    let flagMenu = true;
+    $('.menu').on('click', function () {
+        if(flagMenu) {
+            flagMenu = false;
+            $('.menu-list').slideToggle(function () {
+                flagMenu = true;
+            });
+            $('body').toggleClass('active');
+        }
+    });
+
+
 });

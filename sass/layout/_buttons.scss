@@ -37,8 +37,8 @@ button {
     border: 1px solid $border-color;
     color: $white;
     &:hover {
-      background: $main-dark;
-      //color: $menu-color;
+      background: $white;
+      color: $menu-color;
       border-color: transparent;
     }
   }

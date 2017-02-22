@@ -83,6 +83,10 @@ html {
   border: 2px solid green;
 }
 
+.active {
+  overflow: hidden;
+}
+
 .text {
   font: 1.3rem "open-sans", sans-serif;
   color: #7b7b7b;
@@ -157,7 +161,8 @@ button {
   color: #fff;
 }
 .btn-border:hover {
-  background: #394b50;
+  background: #fff;
+  color: #868686;
   border-color: transparent;
 }
 
@@ -173,6 +178,32 @@ button {
   display: flex;
   -webkit-justify-content: flex-end;
   justify-content: flex-end;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .main-header .menu-list .btn {
+    padding: 1.3rem 1.5rem;
+  }
+}
+@media (max-width: 767px) {
+  .main-header .menu-list {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 100;
+    width: 60%;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.91);
+  }
+  .main-header .menu-list a {
+    color: #fff;
+  }
+}
+@media (max-height: 341px) {
+  .main-header .menu-list .btn {
+    padding: 1.3rem 2rem;
+  }
 }
 @media (max-width: 767px) {
   .main-footer .menu-list {
@@ -279,7 +310,7 @@ button {
 }
 @media (max-width: 1120px) {
   .inputs-list li {
-    margin: 0 1rem 1rem 0;
+    margin: 0 0 1rem 0;
   }
 }
 .inputs-list li:last-child {
@@ -305,6 +336,11 @@ input {
   -webkit-border-radius: 2px;
   border-radius: 2px;
   outline: none;
+}
+@media only screen and (max-width: 479px) {
+  input {
+    width: 100%;
+  }
 }
 input.border-inp {
   border: 1px solid #cbcbcb;
@@ -459,7 +495,7 @@ input.border-inp {
   -webkit-align-items: stretch;
   align-items: stretch;
 }
-@media (max-width: 870px) {
+@media (max-width: 991px) {
   .about-us {
     -webkit-flex-direction: column;
     flex-direction: column;
@@ -470,20 +506,25 @@ input.border-inp {
   padding: 16rem 7.5rem 17rem;
   background: #ffc155;
 }
-@media (max-width: 870px) {
+@media (max-width: 991px) {
   .about-us .content-wrap {
     width: 100%;
-    padding: 6rem 2.5rem 6rem;
+    padding: 6rem 4rem 6rem 2.5rem;
   }
 }
 .about-us p {
   max-width: 50.5rem;
   line-height: 2.4rem;
 }
+@media (max-width: 991px) {
+  .about-us p {
+    max-width: 100%;
+  }
+}
 .about-us .img-wrap {
   width: 50%;
 }
-@media (max-width: 870px) {
+@media (max-width: 991px) {
   .about-us .img-wrap {
     width: 100%;
     display: -webkit-flex;
@@ -491,13 +532,8 @@ input.border-inp {
   }
 }
 .about-us .img-wrap img {
-  max-width: 100%;
+  width: 100%;
   height: 100%;
-}
-@media (max-width: 870px) {
-  .about-us .img-wrap img {
-    width: 100%;
-  }
 }
 
 .price-table {
@@ -510,13 +546,15 @@ input.border-inp {
   display: flex;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-align-items: center;
-  align-items: center;
+  -webkit-align-items: baseline;
+  align-items: baseline;
 }
 @media (max-width: 767px) {
   .price-list {
     -webkit-flex-direction: column;
     flex-direction: column;
+    -webkit-align-items: center;
+    align-items: center;
   }
 }
 @media (max-width: 767px) {
@@ -530,10 +568,18 @@ input.border-inp {
   padding: 5rem 3rem 5.5rem;
   background: #fff;
   text-align: center;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
 }
 @media (max-width: 767px) {
   .price-card {
     width: 80%;
+  }
+}
+@media only screen and (max-width: 479px) {
+  .price-card {
+    width: 95%;
   }
 }
 .price-card h3 {
@@ -559,11 +605,11 @@ input.border-inp {
   color: #818b95;
   text-transform: uppercase;
 }
+.price-card-border {
+  border: 1px solid #ccd5df;
+}
 .price-card-blue {
   background: #709dca;
-  -moz-border-radius: 2px;
-  -webkit-border-radius: 2px;
-  border-radius: 2px;
 }
 .price-card-blue h3 {
   color: #fff;
@@ -575,7 +621,7 @@ input.border-inp {
   color: #fff;
 }
 .price-card-bigger {
-  padding: 8.5rem 3rem 8rem;
+  padding: 8rem 3rem 8.5rem;
 }
 
 .info-list {
@@ -724,6 +770,26 @@ input.border-inp {
   width: 1.5rem;
   height: 1rem;
   background: url("../img/quotes-lower.png") 50% 50% no-repeat;
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .client-card p:after {
+    right: 13%;
+  }
+}
+@media (min-width: 534px) and (max-width: 548px) {
+  .client-card p:after {
+    right: 1%;
+  }
+}
+@media (min-width: 444px) and (max-width: 509px) {
+  .client-card p:after {
+    right: 1%;
+  }
+}
+@media (min-width: 383px) and (max-width: 397px) {
+  .client-card p:after {
+    right: 1%;
+  }
 }
 @media (max-width: 380px) {
   .client-card p:after {

@@ -44,6 +44,18 @@
       width: 1.5rem;
       height: 1rem;
       @include small-bg("../img/quotes-lower.png");
+      @media (min-width: 992px)and(max-width: 1199px) {
+        right: 13%;
+      }
+      @media (min-width: 534px)and(max-width: 548px) {
+        right: 1%;
+      }
+      @media (min-width: 444px)and(max-width: 509px) {
+        right: 1%;
+      }
+      @media (min-width: 383px)and(max-width: 397px) {
+        right: 1%;
+      }
       @media (max-width: 380px) {
         right: 0;
       }

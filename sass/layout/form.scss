@@ -22,7 +22,7 @@
     position: relative;
     margin-right: 1rem;
    @media (max-width: 1120px) {
-     margin: 0 1rem 1rem 0;
+     margin: 0 0 1rem 0;
    }
 
    &:last-child {
@@ -46,6 +46,9 @@ input {
   @include open-sans(1.3rem);
   @include border-radius(2px);
   outline: none;
+  @include respond-to(handhelds) {
+    width: 100%;
+  }
   &.border-inp {
     border: 1px solid $light-grey;
   }
